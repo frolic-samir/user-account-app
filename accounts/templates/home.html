@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+    <h4 class='mt-2 mb-3'>Welcome, {{ request.user.username }}</h4>
+    <a href="{% url 'logout' %}" class="text-decoration-none">Logout</a>
+{% endif %}
+{% endblock content %}
